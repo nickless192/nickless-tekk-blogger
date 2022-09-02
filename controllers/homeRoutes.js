@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {User, Post, Comment} = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
     console.log(req.session);
@@ -35,6 +36,7 @@ router.get('/', (req, res) => {
     //res.render('homepage');
 });
 
+// open single post
 router.get('/post/:id', (req, res) => {
     Post.findOne({
         where: {
@@ -75,7 +77,8 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
-router.get('/newpost', (req, res) => {
+// open create a new post
+router.get('/newpost',withAuth, (req, res) => {
     if (req.session.loggedIn) {
         res.render('new-post');
     }

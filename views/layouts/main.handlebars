@@ -10,9 +10,6 @@
 
 <body>
     <header>
-        <h1>
-            <a href="/">Nickless Tekk Blogger</a>
-        </h1>
         <nav>
             <a href="/">Home</a>
             {{#if loggedIn}}
@@ -22,18 +19,16 @@
             <a href="/login">Login</a>
             {{/if}}
         </nav>
+        <h1>
+            <a href="/">Nickless Tekk Blogger</a>
+        </h1>
     </header>
     <main>
         {{{ body }}}
     </main>
-    {{#if loggedIn}}
-    <footer>
-        <button type="button" id="add-post-btn">Add New Post</button>
-    </footer>
-    {{/if}}
 </body>
 {{#if loggedIn}}
 <script src="/javascripts/logout.js"></script>
-<script src="/javascripts/newpost.js"></script>
 {{/if}}
+
 </html>

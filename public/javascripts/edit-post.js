@@ -1,11 +1,12 @@
-async function addPostHandler (event) {
+async function editPostHandler (event) {
     event.preventDefault();
 
     const title = document.querySelector('#title').value;
     const entry = document.querySelector('#entry').value;
+    const post_id = document.location.toString().trim('/')[document.location.toString().trim('/').length-1];
 
-    const response = await fetch ('/api/posts', {
-        method: 'post',
+    const response = await fetch (`/api/posts/${post_id}`, {
+        method: 'put',
         body: JSON.stringify({
             title,
             entry
@@ -20,4 +21,4 @@ async function addPostHandler (event) {
     }
 }
 
-document.getElementById('new-post-form').addEventListener('submit', addPostHandler);
+document.getElementById('edit-post-form').addEventListener('submit', editPostHandler);
