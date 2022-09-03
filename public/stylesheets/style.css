@@ -23,25 +23,84 @@ header {
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+nav {
+    align-items: flex-end;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    margin: 16px 16px 16px 20px;
+}
+
+nav a, header a {
+    padding: 10px;
+    color: hsl(206, 17%, 28%);
+    text-decoration: none;
 }
 
 
-.btn {
+
+h2 {
+    color:teal;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+
+button {
+    /* border: none; */
+    border: 2px solid grey;
+    color: hsl(206, 17%, 28%);
+    font-size: 22px;
+    margin: 15px;
+    line-height: 22px;
+    cursor: pointer;
+    background: none;
+  }
+
+nav button {
   border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
+  color: hsl(206, 17%, 28%);
   font-size: 22px;
   line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
   cursor: pointer;
+  background: none;
 }
 
-.btn-no-style {
-    background: none;
+label {
+    margin: 15px;
+    display: block;
+    font-size: 20px;
+}
+
+input, textarea {
+    margin: 15px;
+    /* width: 50%; */
+}
+
+p {
+    margin: 15px;
+    font-size: 24px;
+}
+
+.meta {
+    font-size: 12px;
+    margin-left: 15px;
+    font-weight: bold;
+    color:cadetblue;
+}
+
+.comment {
+    margin-top: 15px;
+}
+
+.text {
+    font-size: 12px;
+    margin-left: 15px;
+    margin-top: 5px;
 }
